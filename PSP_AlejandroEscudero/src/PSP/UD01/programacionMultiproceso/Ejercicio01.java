@@ -1,7 +1,12 @@
 package PSP.UD01.programacionMultiproceso;
 
 import java.io.IOException;
-
+/**
+ * Crea una clase Java cuyo método main lance la aplicación de Firefox.
+ * @author Alejandro Escudero Sánchez
+ * 2º DAM
+ *
+ */
 public class Ejercicio01 {
 
 	public static void main(String[] args) {
