@@ -14,7 +14,9 @@ public class Ejercicio04 {
 	public static void main(String[] args) {
 		Runtime rt = Runtime.getRuntime();
 		Process proceso = null;
-		String comando ="CMD /C DIRRRR"; //comando para Windows
+		String comandoLinux = "ls --help";
+		String comandoWindows ="CMD /C DIRRRR"; //comando para Windows
+		String comando = comandoWindows;
 		int estado;
 		try {
 			proceso = rt.exec(comando);
