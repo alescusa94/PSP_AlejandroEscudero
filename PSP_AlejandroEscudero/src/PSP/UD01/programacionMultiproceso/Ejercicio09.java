@@ -36,8 +36,8 @@ public class Ejercicio09 {
 		// Indicamos los respectivos ficheros de salida
 		File ficheroSalida = new File(Ejercicio03.getCadenaFichero("salida_ejercicio9.txt"));
 		File ficheroSalidaError = new File(Ejercicio03.getCadenaFichero("log_ejercicio9.txt"));
-		procesBuild.redirectOutput(ficheroSalidaError);
-		procesBuild.redirectError(ficheroSalida);
+		procesBuild.redirectOutput(ficheroSalida);
+		procesBuild.redirectError(ficheroSalidaError);
 
 		try {
 
