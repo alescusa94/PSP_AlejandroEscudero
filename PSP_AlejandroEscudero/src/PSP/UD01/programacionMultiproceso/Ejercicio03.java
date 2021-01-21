@@ -29,6 +29,7 @@ public class Ejercicio03 {
 			InputStream is = proceso.getInputStream(); //flujo de entrada de bytes del proceso
 			//Creamos el flujo para poder leer ese proceso como texto
 			BufferedReader flujoReader = new BufferedReader(new InputStreamReader(is));
+			//Crea el fichero "salida_comando_" + el comando y guarda en él lo que devuelve la ejecución del proceso
 			BufferedWriter flujoWriter = new BufferedWriter(new FileWriter(getCadenaFichero("salida_comando_" + comando.replace('/', '_'))));
 			String linea;
 			//Mientras se lea una línea, las irá mostrando

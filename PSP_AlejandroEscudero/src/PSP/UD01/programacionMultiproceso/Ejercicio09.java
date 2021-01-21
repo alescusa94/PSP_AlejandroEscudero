@@ -21,14 +21,11 @@ public class Ejercicio09 {
 	public static void main(String[] args) {
 		Process proceso = null;
 		int estado = -1;
-		String comandoLinux = "ls -help";
-		String comandoWindows = "CMD /C DIR C:\\\\Users\\\\aleja\\\\git\\\\PSP_AlejandroEscudero\\\\PSP_AlejandroEscudero\\\\ficheros";
-		String comando = comandoWindows;
 		List<String> listaComandos = new ArrayList<String>();
 		listaComandos.add("CMD");
-		listaComandos.add("DIR");
+		listaComandos.add("DIRR");
 		listaComandos.add("/C");
-		listaComandos.add("C:\\Users\\aleja\\git\\PSP_AlejandroEscudero\\PSP_AlejandroEscudero\\ficheros");
+
 
 		// Creamos el procesBuilder de la lista de comandos
 		ProcessBuilder procesBuild = new ProcessBuilder(listaComandos);
@@ -43,7 +40,6 @@ public class Ejercicio09 {
 
 			proceso = procesBuild.start(); // iniciamos el proceso
 			estado = proceso.waitFor();// El estado espera hasta que termine el proceso por completo
-			System.out.println("El comando " + comando + " ha resultado " + estado);
 
 		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();

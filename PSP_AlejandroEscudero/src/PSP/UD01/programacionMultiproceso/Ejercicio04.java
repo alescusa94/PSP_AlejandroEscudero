@@ -15,7 +15,7 @@ public class Ejercicio04 {
 		Runtime rt = Runtime.getRuntime();
 		Process proceso = null;
 		String comandoLinux = "ls --help";
-		String comandoWindows ="CMD /C DIRRRR"; //comando para Windows
+		String comandoWindows ="CMD /C DIRRRR"; //comando para Windows (mal puesto para que provoque error)
 		String comando = comandoWindows;
 		int estado;
 		try {

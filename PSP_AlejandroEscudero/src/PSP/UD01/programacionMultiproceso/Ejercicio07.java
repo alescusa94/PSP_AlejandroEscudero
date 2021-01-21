@@ -17,7 +17,9 @@ public class Ejercicio07 {
 		String url ="iescristobaldemonroy.es";
 
 		try {
+			//Crea el proceso
 			ProcessBuilder processBuilder = new ProcessBuilder(comando, url );
+			//lo inicia
 			processBuilder.start();
 
 		} catch (IOException e) {
