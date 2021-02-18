@@ -14,7 +14,7 @@ public class HiloCuentaBancaria {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Cuenta c = new Cuenta(40);
+		Cuenta c = new Cuenta(40);//Se crea una cuenta con saldo 40
 		SacarDinero hAna = new SacarDinero("Ana", c);
 		SacarDinero hJuan = new SacarDinero("Juan", c);
 		hAna.start();
@@ -41,6 +41,7 @@ public class HiloCuentaBancaria {
 		// no se podrán seguir haciendo operaciones. Como Ana llega antes para retirar el dinero,
 		//Juan no puede realizar sus operaciones.
 		synchronized void retirarDinero(int cant, String nom) {
+			//Si el saldo actual es mayor o igual a la cantidad a sacar...
 			if (getSaldo() >= cant) {
 				System.out.println("SE VA A RETIRAR SALDO (ACTUAL ES: " + getSaldo() + ")");
 				try {

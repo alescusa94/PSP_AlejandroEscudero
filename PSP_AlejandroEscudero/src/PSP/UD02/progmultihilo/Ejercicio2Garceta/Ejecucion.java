@@ -19,6 +19,7 @@ public class Ejecucion {
 			e.getMessage();
 		}
 		//El proceso se parará por donde vaya ejecutándose a los 5 segundos
+		System.out.println("Se terminó el proceso");
 	}
 
 }
