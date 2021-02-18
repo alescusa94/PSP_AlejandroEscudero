@@ -14,10 +14,11 @@ public class PruebaReto1 {
 	public static void main(String[] args) {
 		URL url = null;
 		URLConnection conexion = null;
+
 		try {
 			url = new URL("https://psp2021site.000webhostapp.com/suma_parametros.php");
 			conexion = url.openConnection();
-			conexion.setDoInput(true);
+			conexion.setDoOutput(true);
 			// Le pasamos los parámetros por cadena
 			String cadena = "PARAM_A=5&PARAM_B=6";
 			PrintWriter output = new PrintWriter(conexion.getOutputStream());
@@ -31,8 +32,9 @@ public class PruebaReto1 {
 				// Eliminamos la etiqueta HTML con el replaceAll
 
 				System.out.println(inputLine.replaceAll("\\<[^>]*>", ""));
-				bReader.close();
 			}
+			bReader.close();
+
 
 		} catch (MalformedURLException e) {
 			e.printStackTrace();

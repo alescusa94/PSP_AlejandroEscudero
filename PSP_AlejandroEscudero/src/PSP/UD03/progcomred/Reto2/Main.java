@@ -9,9 +9,9 @@ public class Main {
 	public static void main(String[] args) throws MalformedURLException, IOException {
 
 		ManagerCalculadora mc = new ManagerCalculadora();
-			mc.sumar(5, 6);
+			mc.sumar(7, 6);
 			mc.restar(8, 4);
-			mc.multiplicar(7, 4);
+			mc.multiplicar(8, 4);
 	}
 
 }
