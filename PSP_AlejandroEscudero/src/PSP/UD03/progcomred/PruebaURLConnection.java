@@ -20,14 +20,15 @@ public class PruebaURLConnection {
 		URL url = null;
 		URLConnection urlCon = null;
 		try {
-			url = new URL("https://psp2021site.000webhostapp.com/");
+			url = new URL("http://www.elaltozano.es");
 			urlCon = url.openConnection();
 			BufferedReader in;
 			InputStream inputStream = urlCon.getInputStream();
 			in = new BufferedReader(new InputStreamReader(inputStream));
 			String inputLine;
 			while ((inputLine = in.readLine()) != null)
-				System.out.println(inputLine);
+				//Eliminamos las etiquetas HTML
+				System.out.println(inputLine.replaceAll("\\<[^>]*>", ""));
 			in.close();
 		} catch (MalformedURLException e) {
 			e.printStackTrace();

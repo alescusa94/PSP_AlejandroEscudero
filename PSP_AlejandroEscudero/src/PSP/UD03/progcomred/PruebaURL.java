@@ -22,7 +22,7 @@ public class PruebaURL {
 			url = new URL("http://docs.oracle.com/");
 			visualizar(url);
 			System.out.println("Otro constructor simple para una URL:");
-			url = new URL("http://localhost/PFC/gest/cli_gestion,php?S=3");
+			url = new URL("http://localhost/PFC/gest/cli_gestion.php?S=3");
 			visualizar(url);
 			System.out.println("Const. para protocolo +URL +directorio:");
 			url = new URL("http", "docs.oracle.com", "/javase/7");
@@ -63,8 +63,9 @@ public class PruebaURL {
 			in = new BufferedReader(new InputStreamReader(inputStream));
 			String inputLine;
 			while ((inputLine = in.readLine()) != null) {
-				System.out.println(inputLine);				
-			}
+				// Eliminamos la etiqueta HTML con el replaceAll
+				System.out.println(inputLine.replaceAll("\\<[^>]*>", ""));
+			}			
 			in.close();
 		} catch (IOException e) {
 			e.printStackTrace();

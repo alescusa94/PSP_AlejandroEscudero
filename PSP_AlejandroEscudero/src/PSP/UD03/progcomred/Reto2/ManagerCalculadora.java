@@ -9,6 +9,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class ManagerCalculadora {
+	
 	private String protocolo;
 	private String urlEndPoint;
 	private Integer apiKey;
@@ -65,7 +66,7 @@ public class ManagerCalculadora {
 		try {
 			protocolo = "https://psp2021site.000webhostapp.com/";
 			urlEndPoint = "realizaOperacion.php";
-			apiKey = 177;
+			apiKey = 101;
 			URL url = new URL(protocolo + urlEndPoint + "?API_KEY=" + apiKey + "&TIPO_OPERACION=SUMA&SUMANDO_A=" + a
 					+ "&SUMANDO_B=" + b);
 			URLConnection urlCon = url.openConnection();
@@ -127,4 +128,10 @@ public class ManagerCalculadora {
 			e.printStackTrace();
 		}
 	}
+
+
+	
+
+	
+
 }

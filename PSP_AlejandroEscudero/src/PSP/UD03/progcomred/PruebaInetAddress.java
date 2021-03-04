@@ -19,7 +19,7 @@ public class PruebaInetAddress {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		{
+		
 			
 			System.out.println("===========================================");
 			System.out.println("SALIDA PARA LOCALHOST: ");
@@ -47,7 +47,7 @@ public class PruebaInetAddress {
 			}
 		} // main
 
-	}
+	
 
 	private static void pruebaMetodos(InetAddress dir) {
 		System.out.println("\tMetodo getByName(): " + dir);
